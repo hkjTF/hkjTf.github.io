@@ -1,19 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Layout from '@/layout'
+import Layout from '@/layout'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/cover',
     name: 'cover',
+    hidden: true,
     component: () => import('@/views/Cover.vue')
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: () => import('@/layout/index.vue')
+    path: '/',
+    name: 'vue',
+    redirect: '/vue',
+    component: Layout,
+    hidden: false,
+    children: [
+      {
+        path: 'vue',
+        name: 'vue',
+        component: () => import('@/components/MdTemplate.vue'),
+        meta: { title: 'vue', type: 'success' }// type 设置标签颜色 success,info,danger,warning,''
+      }
+    ]
   }
 ]
 

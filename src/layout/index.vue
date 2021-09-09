@@ -5,8 +5,12 @@
         <my-aside />
       </el-aside>
       <el-container>
-        <el-header>Header</el-header>
-        <el-main>Main</el-main>
+        <el-header style="border-bottom: 1px solid #eaecef;">
+          <my-header />
+        </el-header>
+        <el-main>
+          <app-main />
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -14,9 +18,11 @@
 
 <script>
 import MyAside from './components/aside'
+import MyHeader from './components/MyHeader'
+import AppMain from './components/AppMain'
 export default {
   name: 'Layout',
-  components: { MyAside }
+  components: { AppMain, MyHeader, MyAside }
 }
 </script>
 

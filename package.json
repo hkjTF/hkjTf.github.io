@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.6",
+    "github-markdown-css": "^4.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
@@ -26,6 +28,8 @@
     "less-loader": "^5.0.0",
     "postcss": "^8.3.6",
     "prettier": "^2.2.1",
+    "vue-markdown-loader": "^2.4.1",
+    "vue-particles": "^1.0.9",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

@@ -1,9 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import 'amfe-flexible'
+import 'github-markdown-css'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
+
+import '@/styles/index.less'
 
 Vue.config.productionTip = false
+Vue.use(ElementUI)
 
 new Vue({
   router,

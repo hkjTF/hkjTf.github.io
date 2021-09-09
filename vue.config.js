@@ -5,6 +5,7 @@ const path = require('path')
 // }
 
 module.exports = {
+  outputDir: 'docs',
   chainWebpack: config => {
     config.resolve.alias
       .set('@', path.resolve(__dirname, 'src'))

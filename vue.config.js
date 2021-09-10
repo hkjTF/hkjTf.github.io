@@ -1,14 +1,12 @@
 const path = require('path')
 
-// function resolve(dir) {
-//   return path.join(__dirname, dir)
-// }
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 
 module.exports = {
   outputDir: 'docs',
   chainWebpack: config => {
-    config.resolve.alias
-      .set('@', path.resolve(__dirname, 'src'))
     config.module.rule('md')
       .test(/\.md/)
       .use('vue-loader')
@@ -19,5 +17,14 @@ module.exports = {
       .options({
         raw: true
       })
+  },
+  configureWebpack: {
+    // provide the app's title in webpack's name field, so that
+    // it can be accessed in index.html to inject the correct title.
+    resolve: {
+      alias: {
+        '@': resolve('src')
+      }
+    }
   }
 }

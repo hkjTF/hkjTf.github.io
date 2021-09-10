@@ -27,5 +27,8 @@ export default {
 </script>
 
 <style scoped>
-
+.el-main{
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
 </style>
